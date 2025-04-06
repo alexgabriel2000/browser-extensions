@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+
+    /* Neutral */
+    --neutral-900: hsl(227, 75%, 14%);
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(226, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 99%);
+
+    /* Red */
+    --red-700: hsl(3, 77%, 44%);
+    --red-500: hsl(3, 71%, 56%);
+    --red-400: hsl(3, 86%, 64%);
+
+    /* Gradient */
+    --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    /* Font / Font size (paragraph): 16px / Weights: 400, 500, 700*/
+    --fonte-principal: "Noto Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 98vw;
+    height: 100%;
+    background-image: var(--dark-gradient);
+    background-attachment: fixed;
+    color: var(--neutral-0);
+    font-family: var(--fonte-principal);
+}
+
+.main--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 85%;
+    margin: 2rem 0;
+    
+}
+
+/* Cabeçalho / Logo */
+.header--extensions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
+    background-color: var(--neutral-800);
+}
+
+.header--logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.img--logo {
+    width: 30px;
+    height: 30px;
+}
+
+.text--logo {
+    font-size: 18px;
+    color: white;
+    font-weight: bolder;
+    font-family: "DM Sans", sans-serif;
+}
+
+.btn--modes {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--neutral-600);
+    cursor: pointer;
+}
+
+.img--modes {
+    width: 18px;
+}
+
+/* Barra de filtro */
+.filter--bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+.filter--title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.filter--btns {
+    display: flex;
+    gap: 8px;
+}
+
+.btn--all {
+    width: 45px;
+}
+
+.btn--active {
+    width: 60px;
+}
+
+.btn--inactive {
+    width: 75px;
+}
+
+.btn--all, .btn--active, .btn--inactive {
+    height: 28px;
+    border: none;
+    border-radius: 16px;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    background-color: var(--neutral-800);
+    color: var(--neutral-300);
+    cursor: pointer;
+}
+
+.btn--all.active, .active {
+    color: var(--neutral-900);
+    background-color: var(--red-400);
+}
+
+.list--extension {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 160px 160px 160px 160px;
+    gap: 8px;
+    width: 100%;
+}
+
+.card--extension {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--neutral-800);
+}
+
+.align--card {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+
+.align--text--card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card--name {
+    font-weight: bold;
+}
+
+.card--text {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--neutral-300);
+}
+
+.btn--remove {
+    width: 75px;
+    height: 28px;
+    font-size: 14px;
+    border: 1px solid var(--neutral-300);
+    border-radius: 16px;
+    background-color: transparent;
+    color: var(--neutral-300);
+    cursor: pointer;
+}
+
+.align--btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container do switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+  }
+  
+  /* Esconde o input padrão */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Estilo do slider (a parte que desliza) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  
+  /* Bolinha branca */
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  /* Quando o checkbox está ativado */
+  input:checked + .slider {
+    background-color: var(--red-400);
+  }
+  
+  /* Movimentar a bolinha pro lado direito */
+  input:checked + .slider::before {
+    transform: translateX(15px);
+  }
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

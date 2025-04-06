@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+
+    <link rel="stylesheet" href="reset.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main--container">
+
+      <!-- Cabeçalho / logo -->
+      <div class="header--extensions">
+        <div class="header--logo">
+          <img
+            class="img--logo"
+            src="assets/images/logo-extensions.png"
+            alt="Logo do site"
+          />
+          <p class="text--logo">Extensions</p>
+        </div>
+
+        <!-- Botão modo claro / escuro -->
+        <button class="btn--modes">
+          <img
+            class="img--modes"
+            src="assets/images/icon-sun.svg"
+            alt="Icone de modo claro"
+          />
+        </button>
+      </div>
+
+      <!-- Cabeçalho da lista de extensões -->
+      <div class="filter--bar">
+        <h1 class="filter--title">Extensions List</h1>
+
+        <div class="filter--btns">
+          <button class="btn--all active">All</button>
+          <button class="btn--active">Active</button>
+          <button class="btn--inactive">Inactive</button>
+        </div>
+      </div>
+
+      <!-- Lista de Extensões -->
+      <ul class="list--extension">
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-devlens.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">DevLens</span>
+              <p class="card--text">
+                Quickly inspect page layouts and visualize element boundaries.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-style-spy.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">StyleSpy</span>
+              <p class="card--text">
+                Instantly analyze and copy CSS from any webpage element.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-speed-boost.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">SpeedBoost</span>
+              <p class="card--text">
+                Optimizes browser resource usage to accelerate page loading.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-json-wizard.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">JSONWizard</span>
+              <p class="card--text">
+                Formats, validates, and prettifies JSON responses in-browser.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-tab-master-pro.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">TabMaster Pro</span>
+              <p class="card--text">
+                Organizes browser tabs into groups and sessions.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-viewport-buddy.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">ViewportBuddy</span>
+              <p class="card--text">
+                Simulates various screen resolutions directly within the
+                browser.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-markup-notes.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">Markup Notes</span>
+              <p class="card--text">
+                Enables annotation and notes directly onto webpages for
+                collaborative debugging.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-grid-guides.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">GridGuides</span>
+              <p class="card--text">
+                Overlay customizable grids and alignment guides on any webpage.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-palette-picker.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">Palette Picker</span>
+              <p class="card--text">
+                Instantly extracts color palettes from any webpage.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-link-checker.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">LinkChecker</span>
+              <p class="card--text">
+                Scans and highlights broken links on any page.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-dom-snapshot.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">DOM Snapshot</span>
+              <p class="card--text">
+                Capture and export DOM structures quickly.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+        <li class="card--extension">
+          <div class="align--card">
+            <img src="assets/images/logo-console-plus.svg" alt="" />
+            <div class="align--text--card">
+              <span class="card--name">ConsolePlus</span>
+              <p class="card--text">
+                Enhanced developer console with advanced filtering and logging.
+              </p>
+            </div>
+          </div>
+
+          <div class="align--btns">
+            <button class="btn--remove">Remove</button>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
